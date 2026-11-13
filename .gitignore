@@ -1,0 +1,20 @@
+# Local Python environments and caches
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+.aws/
+
+# Generated SQLite databases
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# macOS metadata
+.DS_Store

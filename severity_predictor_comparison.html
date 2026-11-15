@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-808839c6ba9f4d087e4face2b23c57b4"}, "mark": {"type": "bar"}, "encoding": {"tooltip": [{"field": "Model", "type": "nominal"}, {"field": "Mean_Deviance", "format": ".4f", "type": "quantitative"}, {"field": "Improvement (%)", "format": ".2f", "type": "quantitative"}], "x": {"field": "Model", "sort": "y", "title": "Predictors included", "type": "nominal"}, "y": {"field": "Mean_Deviance", "title": "Mean Gamma Deviance", "type": "quantitative"}}, "height": 350, "title": "Severity: Do the Predictors Help?", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-808839c6ba9f4d087e4face2b23c57b4": [{"Model": "Full GLM", "Mean_Deviance": 1.7619153493442103, "SD_Across_Folds": 0.17210048220860086, "Ordinary_Deviance": 1.098117616746345, "Large_Loss_Deviance": 67.03635545188102, "Large_Loss_Error_Share": 37.63487791883106, "Improvement (%)": 2.271964763443124}, {"Model": "Driver + Vehicle", "Mean_Deviance": 1.7634505419021764, "SD_Across_Folds": 0.17897938608020683, "Ordinary_Deviance": 1.093951587247255, "Large_Loss_Deviance": 67.68921596639973, "Large_Loss_Error_Share": 37.844229069548284, "Improvement (%)": 2.1868123453910093}, {"Model": "Driver", "Mean_Deviance": 1.768230416938285, "SD_Across_Folds": 0.18109139302607963, "Ordinary_Deviance": 1.0959598538230753, "Large_Loss_Deviance": 68.32915401010474, "Large_Loss_Error_Share": 37.884637704516486, "Improvement (%)": 1.9216873516567645}, {"Model": "Vehicle", "Mean_Deviance": 1.7890585195291273, "SD_Across_Folds": 0.2670205968282225, "Ordinary_Deviance": 1.106316188502159, "Large_Loss_Deviance": 68.33044658811441, "Large_Loss_Error_Share": 37.29445458719884, "Improvement (%)": 0.7664164445351007}, {"Model": "Baseline", "Mean_Deviance": 1.8028760581130923, "SD_Across_Folds": 0.3146730029768617, "Ordinary_Deviance": 1.0962158337200638, "Large_Loss_Deviance": 70.80567635251565, "Large_Loss_Error_Share": 37.91552561124629, "Improvement (%)": 0.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

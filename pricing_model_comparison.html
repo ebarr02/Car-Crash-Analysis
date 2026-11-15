@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-07d1b4644b9ecc7669244c59e2d94ffa"}, "mark": {"type": "bar"}, "encoding": {"tooltip": [{"field": "Model", "type": "nominal"}, {"field": "Tweedie deviance", "format": ".3f", "type": "quantitative"}, {"field": "Actual / Expected", "format": ".3f", "type": "quantitative"}], "x": {"field": "Model", "sort": "y", "title": "Pricing model", "type": "nominal"}, "y": {"field": "Tweedie deviance", "title": "Exposure-weighted Tweedie deviance", "type": "quantitative"}}, "height": 350, "title": "Pure Premium Model Comparison", "width": 580, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-07d1b4644b9ecc7669244c59e2d94ffa": [{"Model": "Frequency + constant severity", "Tweedie deviance": 80.6010611675091, "Actual cost": 11868103.84, "Predicted cost": 11981300.285331579, "Actual / Expected": 0.9905522403549002}, {"Model": "Frequency + Gamma severity", "Tweedie deviance": 82.50959231082491, "Actual cost": 11868103.84, "Predicted cost": 11626000.601557741, "Actual / Expected": 1.0208242926126996}, {"Model": "Flat premium baseline", "Tweedie deviance": 86.49629376132067, "Actual cost": 11868103.84, "Predicted cost": 11994398.984143693, "Actual / Expected": 0.9894704899919827}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

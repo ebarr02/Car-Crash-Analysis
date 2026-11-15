@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-61eaf66d60845dff6351cb44e6c7ea4c"}, "mark": {"type": "bar"}, "encoding": {"x": {"field": "left", "title": "Log10 claim amount", "type": "quantitative"}, "x2": {"field": "right"}, "y": {"field": "claims", "title": "Number of claims", "type": "quantitative"}}, "height": 350, "title": "Distribution of Claim Severity", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-61eaf66d60845dff6351cb44e6c7ea4c": [{"left": 0.0, "right": 0.16525425751983433, "claims": 2}, {"left": 0.16525425751983433, "right": 0.33050851503966866, "claims": 5}, {"left": 0.33050851503966866, "right": 0.49576277255950296, "claims": 2}, {"left": 0.49576277255950296, "right": 0.6610170300793373, "claims": 4}, {"left": 0.6610170300793373, "right": 0.8262712875991717, "claims": 6}, {"left": 0.8262712875991717, "right": 0.9915255451190059, "claims": 17}, {"left": 0.9915255451190059, "right": 1.1567798026388403, "claims": 26}, {"left": 1.1567798026388403, "right": 1.3220340601586746, "claims": 31}, {"left": 1.3220340601586746, "right": 1.487288317678509, "claims": 59}, {"left": 1.487288317678509, "right": 1.6525425751983434, "claims": 86}, {"left": 1.6525425751983434, "right": 1.8177968327181777, "claims": 197}, {"left": 1.8177968327181777, "right": 1.9830510902380118, "claims": 1014}, {"left": 1.9830510902380118, "right": 2.148305347757846, "claims": 308}, {"left": 2.148305347757846, "right": 2.3135596052776806, "claims": 401}, {"left": 2.3135596052776806, "right": 2.478813862797515, "claims": 556}, {"left": 2.478813862797515, "right": 2.6440681203173493, "claims": 734}, {"left": 2.6440681203173493, "right": 2.8093223778371836, "claims": 1631}, {"left": 2.8093223778371836, "right": 2.974576635357018, "claims": 1294}, {"left": 2.974576635357018, "right": 3.1398308928768524, "claims": 10181}, {"left": 3.1398308928768524, "right": 3.3050851503966867, "claims": 1460}, {"left": 3.3050851503966867, "right": 3.470339407916521, "claims": 1071}, {"left": 3.470339407916521, "right": 3.6355936654363554, "claims": 771}, {"left": 3.6355936654363554, "right": 3.80084792295619, "claims": 465}, {"left": 3.80084792295619, "right": 3.9661021804760237, "claims": 274}, {"left": 3.9661021804760237, "right": 4.1313564379958585, "claims": 185}, {"left": 4.1313564379958585, "right": 4.296610695515692, "claims": 90}, {"left": 4.296610695515692, "right": 4.461864953035527, "claims": 55}, {"left": 4.461864953035527, "right": 4.627119210555361, "claims": 43}, {"left": 4.627119210555361, "right": 4.792373468075196, "claims": 21}, {"left": 4.792373468075196, "right": 4.95762772559503, "claims": 21}, {"left": 4.95762772559503, "right": 5.122881983114865, "claims": 10}, {"left": 5.122881983114865, "right": 5.288136240634699, "claims": 9}, {"left": 5.288136240634699, "right": 5.4533904981545325, "claims": 9}, {"left": 5.4533904981545325, "right": 5.618644755674367, "claims": 3}, {"left": 5.618644755674367, "right": 5.783899013194201, "claims": 0}, {"left": 5.783899013194201, "right": 5.949153270714036, "claims": 0}, {"left": 5.949153270714036, "right": 6.11440752823387, "claims": 1}, {"left": 6.11440752823387, "right": 6.279661785753705, "claims": 1}, {"left": 6.279661785753705, "right": 6.444916043273539, "claims": 0}, {"left": 6.444916043273539, "right": 6.610170300793373, "claims": 1}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

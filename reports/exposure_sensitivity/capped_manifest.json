@@ -1,0 +1,115 @@
+{
+  "identity": {
+    "database_sha256": "464d6cc1a7131308781d635555b8b827e5a27ff8975eb702ba3749ef5fc38f6f",
+    "config": {
+      "seed": 42,
+      "folds": 3,
+      "sample": null,
+      "simulations": 20000,
+      "bootstrap": 500,
+      "exposure_cap": 1.0
+    },
+    "code": {
+      "__init__.py": "768f9dffb2b02491eced1266b600a896cffa1313bbb6050fdbf80bcac9fa9e15",
+      "checkpoints.py": "ad93e7f35f423dd1a1d84dc3d13216de7bde9e96f88b3a7d0c3c2846dd7a99ac",
+      "data.py": "9e821bc26ce47134726652188404da8facadb30623aefbcc2473adc0e15d6505",
+      "metrics.py": "0faa6b6bed1fcbd48900d557238f443a533226d4e54bf8c6d5502b3f6a5cebee",
+      "models.py": "f8d445a6581804120b1eb2da6d91408bdf174ed964c4b27bce4e758319c6f28f",
+      "report.py": "3a84b7b7946b2a0d0f53191cfead92d4a8e711ccdc559f35726425d43e4ca8b3",
+      "workflow.py": "242b9a1edbac859595e219f9bd12f15846385b18a4824ea645a617367b7af8df",
+      "run_analysis.py": "149ba4cf176bf5e4267d28f94dcb94ad7a503f7465754d29ebb55db5550104fa"
+    },
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "scikit-learn": "1.9.1",
+      "joblib": "1.6.0",
+      "matplotlib": "3.11.2"
+    },
+    "python": "3.13.5"
+  },
+  "source_database": "C:\\Users\\evanb\\OneDrive\\Desktop\\projects\\Acturary\\Car-Crash-Analysis\\data\\source.db",
+  "created_utc": "2026-11-15T07:28:01.214293+00:00",
+  "stages": {
+    "prepare": {
+      "completed_utc": "2026-11-15T07:28:06.731197+00:00",
+      "artifacts": {
+        "prepared.joblib": "d4fb18cf16b5412b03784dafec9140f3d7667284fe881a36785b9961be15172a",
+        "data_audit.json": "5eee36738876cee53de2c6ece76b8168a7bf2c7067cbc44b9c7137a42b18b79c",
+        "split.csv": "f81a9297aa08961e37b1892a34cd767c2e3de911e809b5d643f6a210d97f8218",
+        "claim_count_reconciliation.csv": "1f166cdd7c986e6be1314aa104b888cf483cf22cb3502960eeba67fef1ff93ab",
+        "training_eda_age.csv": "621e888fed34c14dbce78fa1e91c7c2a390f1bb0ac0f79aa4e208e5c95e40dd0"
+      }
+    },
+    "cv_fold_1": {
+      "completed_utc": "2026-11-15T07:28:20.561845+00:00",
+      "artifacts": {
+        "cv_fold_1.joblib": "43de2f510903c201eeb39fd0bf8dc5d7e6af37266f263dbc1b623684ea80ebc1"
+      }
+    },
+    "cv_fold_2": {
+      "completed_utc": "2026-11-15T07:28:30.076785+00:00",
+      "artifacts": {
+        "cv_fold_2.joblib": "89c3e550d712c7d8f273d5def25c77e435c6b53892ee5939da2a9240e742f5e6"
+      }
+    },
+    "cv_fold_3": {
+      "completed_utc": "2026-11-15T07:28:39.486751+00:00",
+      "artifacts": {
+        "cv_fold_3.joblib": "5530fecf60e2e105b98e71ddcf102b268c7162518302aaad0876d544fda0c23f"
+      }
+    },
+    "validate": {
+      "completed_utc": "2026-11-15T07:28:42.223360+00:00",
+      "artifacts": {
+        "pricing_cv.csv": "a396fdfc553e0e7ae5c5bfc8cc56423d7d016b9f777cf644be85a6c7dcca77bc",
+        "pricing_cv_folds.csv": "efaccaf00be1765e473893a6dc6d39c01b141a3fb17a1a822f1a0c955db4a6d6",
+        "component_cv_folds.csv": "af46bc4899e16c5efcba981bfeb0d96dd7c7dd301057f38b104d43bfd9866f35",
+        "selection.json": "ff846df060140a8bb9e0dd07677513bb9dc419e719421f86fe85e3fda29e8fe4",
+        "oof.joblib": "e09bf63e6649d74ad870cf3d55c57306f50fd19073ea5a9dd4cf4a39db8500c1"
+      }
+    },
+    "fit": {
+      "completed_utc": "2026-11-15T07:28:45.507645+00:00",
+      "artifacts": {
+        "selected_model.joblib": "42670eb38db2bf915643987c794539dde61d9c9549d0854ecb135afdb2962176",
+        "fit_summary.json": "d54dfa98bbd9917ff41ca5f0370b68b6a30e3b8bd230a6d3c415b27d74fc705a",
+        "selected_glm_coefficients.csv": "7673e0f6506c972c478216ea560b67b627f19f7e510454314c47df2179dd3af7",
+        "adjusted_age_profiles.csv": "e16236e13b17d997becd6e3db1870903dcedc056f43513e9ca37b19c5251fa8c"
+      }
+    },
+    "evaluate": {
+      "completed_utc": "2026-11-15T07:28:54.068782+00:00",
+      "artifacts": {
+        "holdout_metrics.csv": "dbd8f7ff43f99a47a1e89c6157913428ad554833908b4649fa1051e4bd4071ae",
+        "holdout_predictions.csv": "f8e69616153fbe57f31738c027774de8c877698b0fec2e39455edebaf748b2ad",
+        "holdout_uncertainty.csv": "e3ea0e2842757666becdc64bd3b5274b8766156907cdd79ca1d1f6996078615f",
+        "permutation_importance.csv": "ff77351c297e920da0675bf23beff5b8701f80913888b76ae637b22d91a39219",
+        "results.sqlite": "4048e6fa99493c954115a427e9ac8ef1f520dbcf325989f6b6605d00341fe03d",
+        "calibration_risk_decile.csv": "a749373ef05ee3d367133a714fa5747677eb205cdf4242c8f05f80b85e54418f",
+        "calibration_age_band.csv": "c95672cfcf98aae2d3ae3f6bac09d759d43e63834bddf78d29bf6f9587a6fbed",
+        "calibration_VehGas.csv": "5bdf206b0de556237c2647eb254d506d3ffbc0237476cde81ff8b0292c457bb0",
+        "calibration_Region.csv": "48e623c87dceb663b75da9ef437bce08ac8cb379e1922e34a0586b2243695925"
+      }
+    },
+    "simulate": {
+      "completed_utc": "2026-11-15T07:28:57.840473+00:00",
+      "artifacts": {
+        "simulation_losses.csv": "41eaa3f6d5bcedc436264b4a3896470c7a927b29a46456d2f0ab5cb3037e83cc",
+        "simulation_summary.csv": "6c64082988a187a859a7063fb1d0e6e62d89f31694d4c447a7370c9998ce37c5",
+        "severity_cap_sensitivity.csv": "ad1468ebef7d0979ca32bca333ff541fa7854f8a059ee34d194c7deb83b43d4b"
+      }
+    },
+    "report": {
+      "completed_utc": "2026-11-15T07:28:59.716095+00:00",
+      "artifacts": {
+        "pricing_cv.png": "2afad588bfd4d1e7946e30361cea6eb88dedd559e74fc14ce0b721acd8d27bff",
+        "calibration.png": "3f42edcc5b513b782d30b286373b9d395b70c724561b74f4140408395a37b1e7",
+        "importance.png": "5fe66975900be7adf6d9f923c54aaa6dec4441851983cedcea07138dc0e20d02",
+        "adjusted_age.png": "97f8a1e4223e1ec5144c0ebe4b94530bcea7dc831d005864af2429bf17ccd233",
+        "simulation.png": "8dcc15fa7fb8d3fcea11d1ff44985f417de57e698bc3bdc7bef54f619e6d33d3",
+        "report.md": "7cf456f1fef74a1c92bed2521ddd0aa713125827e20c7e1d0bac6e5cdf9c4767"
+      }
+    }
+  }
+}

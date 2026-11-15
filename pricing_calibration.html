@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-58e946b0adb016af2a31aa33ab7f9ab9"}, "facet": {"column": {"field": "Model", "title": "Severity assumption", "type": "nominal"}}, "spec": {"mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "Type", "type": "nominal"}, "tooltip": [{"field": "Model", "type": "nominal"}, {"field": "risk_decile", "type": "ordinal"}, {"field": "Type", "type": "nominal"}, {"field": "Annual cost", "format": ".2f", "type": "quantitative"}], "x": {"field": "risk_decile", "title": "Predicted risk decile", "type": "ordinal"}, "y": {"field": "Annual cost", "title": "Annual claim cost per exposure-year", "type": "quantitative"}}, "height": 320, "width": 340}, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-58e946b0adb016af2a31aa33ab7f9ab9": [{"Model": "Constant severity", "risk_decile": 0, "Type": "Actual annual cost", "Annual cost": 46.80542620566414}, {"Model": "Constant severity", "risk_decile": 1, "Type": "Actual annual cost", "Annual cost": 189.43751176646714}, {"Model": "Constant severity", "risk_decile": 2, "Type": "Actual annual cost", "Annual cost": 85.35349563553551}, {"Model": "Constant severity", "risk_decile": 3, "Type": "Actual annual cost", "Annual cost": 97.28604884573153}, {"Model": "Constant severity", "risk_decile": 4, "Type": "Actual annual cost", "Annual cost": 82.61545924783191}, {"Model": "Constant severity", "risk_decile": 5, "Type": "Actual annual cost", "Annual cost": 119.77256302647804}, {"Model": "Constant severity", "risk_decile": 6, "Type": "Actual annual cost", "Annual cost": 111.11522143624666}, {"Model": "Constant severity", "risk_decile": 7, "Type": "Actual annual cost", "Annual cost": 191.77207764786314}, {"Model": "Constant severity", "risk_decile": 8, "Type": "Actual annual cost", "Annual cost": 233.6637437768762}, {"Model": "Constant severity", "risk_decile": 9, "Type": "Actual annual cost", "Annual cost": 613.1519219754986}, {"Model": "Gamma severity", "risk_decile": 0, "Type": "Actual annual cost", "Annual cost": 134.7516388893527}, {"Model": "Gamma severity", "risk_decile": 1, "Type": "Actual annual cost", "Annual cost": 64.57455128729079}, {"Model": "Gamma severity", "risk_decile": 2, "Type": "Actual annual cost", "Annual cost": 105.11532150815016}, {"Model": "Gamma severity", "risk_decile": 3, "Type": "Actual annual cost", "Annual cost": 114.60677262853102}, {"Model": "Gamma severity", "risk_decile": 4, "Type": "Actual annual cost", "Annual cost": 122.84626918020834}, {"Model": "Gamma severity", "risk_decile": 5, "Type": "Actual annual cost", "Annual cost": 106.34935484135579}, {"Model": "Gamma severity", "risk_decile": 6, "Type": "Actual annual cost", "Annual cost": 141.75204519487735}, {"Model": "Gamma severity", "risk_decile": 7, "Type": "Actual annual cost", "Annual cost": 167.0452440100569}, {"Model": "Gamma severity", "risk_decile": 8, "Type": "Actual annual cost", "Annual cost": 235.6175283624713}, {"Model": "Gamma severity", "risk_decile": 9, "Type": "Actual annual cost", "Annual cost": 571.4913992921109}, {"Model": "Constant severity", "risk_decile": 0, "Type": "Predicted annual cost", "Annual cost": 69.62213982191804}, {"Model": "Constant severity", "risk_decile": 1, "Type": "Predicted annual cost", "Annual cost": 92.55522716912868}, {"Model": "Constant severity", "risk_decile": 2, "Type": "Predicted annual cost", "Annual cost": 106.89902076119138}, {"Model": "Constant severity", "risk_decile": 3, "Type": "Predicted annual cost", "Annual cost": 119.79910202464458}, {"Model": "Constant severity", "risk_decile": 4, "Type": "Predicted annual cost", "Annual cost": 133.03416755710492}, {"Model": "Constant severity", "risk_decile": 5, "Type": "Predicted annual cost", "Annual cost": 148.30330651292013}, {"Model": "Constant severity", "risk_decile": 6, "Type": "Predicted annual cost", "Annual cost": 167.62875069339}, {"Model": "Constant severity", "risk_decile": 7, "Type": "Predicted annual cost", "Annual cost": 197.56599262175135}, {"Model": "Constant severity", "risk_decile": 8, "Type": "Predicted annual cost", "Annual cost": 255.14376506366102}, {"Model": "Constant severity", "risk_decile": 9, "Type": "Predicted annual cost", "Annual cost": 499.636041166068}, {"Model": "Gamma severity", "risk_decile": 0, "Type": "Predicted annual cost", "Annual cost": 55.17185766782536}, {"Model": "Gamma severity", "risk_decile": 1, "Type": "Predicted annual cost", "Annual cost": 74.11734213526042}, {"Model": "Gamma severity", "risk_decile": 2, "Type": "Predicted annual cost", "Annual cost": 86.46610437438807}, {"Model": "Gamma severity", "risk_decile": 3, "Type": "Predicted annual cost", "Annual cost": 98.45345674175802}, {"Model": "Gamma severity", "risk_decile": 4, "Type": "Predicted annual cost", "Annual cost": 111.02965064956267}, {"Model": "Gamma severity", "risk_decile": 5, "Type": "Predicted annual cost", "Annual cost": 127.02395885147557}, {"Model": "Gamma severity", "risk_decile": 6, "Type": "Predicted annual cost", "Annual cost": 148.96694194941298}, {"Model": "Gamma severity", "risk_decile": 7, "Type": "Predicted annual cost", "Annual cost": 186.04043980449086}, {"Model": "Gamma severity", "risk_decile": 8, "Type": "Predicted annual cost", "Annual cost": 263.53679933895063}, {"Model": "Gamma severity", "risk_decile": 9, "Type": "Predicted annual cost", "Annual cost": 608.26922218828}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

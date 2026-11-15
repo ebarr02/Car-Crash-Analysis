@@ -1,0 +1,3 @@
+IDpol,Exposure,DrivAge,VehPower,VehAge,BonusMalus,VehBrand,VehGas,Area,Region,Density
+example_1,1.0,40,6,5,50,B1,Regular,D,R24,500
+example_2,0.5,23,7,2,100,B2,Diesel,C,R11,100

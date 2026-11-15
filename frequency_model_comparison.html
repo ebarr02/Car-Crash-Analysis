@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-423829904ef4084c826036613b6fe961"}, "mark": {"type": "bar"}, "encoding": {"tooltip": [{"field": "Model", "type": "nominal"}, {"field": "Mean Poisson Deviance", "type": "quantitative"}, {"field": "Improvement (%)", "type": "quantitative"}], "x": {"field": "Model", "sort": "y", "title": "Model", "type": "nominal"}, "y": {"field": "Mean Poisson Deviance", "title": "Mean Poisson Deviance", "type": "quantitative"}}, "height": 350, "title": "Frequency Model Comparison", "width": 550, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-423829904ef4084c826036613b6fe961": [{"Model": "Poisson Boosting", "Mean Poisson Deviance": 0.302737606623954, "Improvement (%)": 8.273397147684092}, {"Model": "Spline GLM", "Mean Poisson Deviance": 0.31892435651677903, "Improvement (%)": 3.3689665569606175}, {"Model": "Linear GLM", "Mean Poisson Deviance": 0.3194106442256149, "Improvement (%)": 3.221626026533042}, {"Model": "Baseline", "Mean Poisson Deviance": 0.330043408575128, "Improvement (%)": 0.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

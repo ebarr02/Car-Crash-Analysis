@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-061f618974a19f57aa80dbbba9c37ee6"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "Type", "type": "nominal"}, "tooltip": [{"field": "severity_decile", "type": "ordinal"}, {"field": "Type", "type": "nominal"}, {"field": "Claim Amount", "type": "quantitative"}], "x": {"field": "severity_decile", "title": "Predicted severity decile", "type": "ordinal"}, "y": {"field": "Claim Amount", "title": "Average claim cost", "type": "quantitative"}}, "height": 350, "title": "Severity Calibration: Gamma GLM", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-061f618974a19f57aa80dbbba9c37ee6": [{"severity_decile": 0, "Type": "actual_severity", "Claim Amount": 2347.0543333333335}, {"severity_decile": 1, "Type": "actual_severity", "Claim Amount": 2057.6587037037034}, {"severity_decile": 2, "Type": "actual_severity", "Claim Amount": 2155.874685185185}, {"severity_decile": 3, "Type": "actual_severity", "Claim Amount": 3345.4904814814813}, {"severity_decile": 4, "Type": "actual_severity", "Claim Amount": 2170.688111111111}, {"severity_decile": 5, "Type": "actual_severity", "Claim Amount": 2261.8372777777777}, {"severity_decile": 6, "Type": "actual_severity", "Claim Amount": 1774.3532407407408}, {"severity_decile": 7, "Type": "actual_severity", "Claim Amount": 2076.060740740741}, {"severity_decile": 8, "Type": "actual_severity", "Claim Amount": 2039.6185185185186}, {"severity_decile": 9, "Type": "actual_severity", "Claim Amount": 1749.3339814814815}, {"severity_decile": 0, "Type": "predicted_severity", "Claim Amount": 1233.344883463252}, {"severity_decile": 1, "Type": "predicted_severity", "Claim Amount": 1513.4908781378958}, {"severity_decile": 2, "Type": "predicted_severity", "Claim Amount": 1691.0080930816018}, {"severity_decile": 3, "Type": "predicted_severity", "Claim Amount": 1851.5163392027382}, {"severity_decile": 4, "Type": "predicted_severity", "Claim Amount": 2005.4194654205103}, {"severity_decile": 5, "Type": "predicted_severity", "Claim Amount": 2166.3272904793425}, {"severity_decile": 6, "Type": "predicted_severity", "Claim Amount": 2350.421716941882}, {"severity_decile": 7, "Type": "predicted_severity", "Claim Amount": 2592.409851754459}, {"severity_decile": 8, "Type": "predicted_severity", "Claim Amount": 2932.1068251699585}, {"severity_decile": 9, "Type": "predicted_severity", "Claim Amount": 3862.372729390516}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

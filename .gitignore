@@ -18,3 +18,11 @@ __pycache__/
 
 # macOS metadata
 .DS_Store
+
+# Canonical pipeline: raw data, checkpoints and policy-level exports stay local.
+data/
+results/
+.cache/
+*.sqlite
+*.sqlite-journal
+# Keep reports/ snapshots and their small aggregate CSV/PNG artifacts in Git.

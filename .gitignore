@@ -1,28 +1,20 @@
-# Local Python environments and caches
-venv/
+# Local environments, caches and settings
 .venv/
+venv/
 __pycache__/
 *.py[cod]
-
-# Local credentials and configuration
+.cache/
 .env
 .env.*
-!.env.example
 .aws/
-
-# Generated SQLite databases
-*.db
-*.db-journal
-*.db-wal
-*.db-shm
-
-# macOS metadata
 .DS_Store
 
-# Canonical pipeline: raw data, checkpoints and policy-level exports stay local.
+# Downloaded data and earlier local analysis runs
 data/
 results/
-.cache/
+*.db
+*.db-*
 *.sqlite
-*.sqlite-journal
-# Keep reports/ snapshots and their small aggregate CSV/PNG artifacts in Git.
+*.sqlite-*
+
+# Keep only the small final report and its two supporting outputs.

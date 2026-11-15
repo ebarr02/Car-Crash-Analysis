@@ -1,3 +1,0 @@
-assumption,selected_model,cv_deviance,holdout_deviance,baseline_deviance,improvement_pct,predicted_cost,actual_cost,actual_to_expected
-cap at one year,poisson_boosting + constant,79.59827098737183,80.6010611675091,86.49629376132067,6.815589821777768,11981300.28533158,11868103.84,0.9905522403549
-original exposure,poisson_boosting + constant,79.45290674135934,81.0034926525065,86.48057318566332,6.333307390780352,11985938.403920233,11868103.84,0.9901689329655079

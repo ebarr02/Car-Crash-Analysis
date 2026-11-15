@@ -1,4 +1,0 @@
--r requirements.txt
-# Only required by the earlier exploratory scripts.
-altair==6.3.0
-statsmodels==0.15.0

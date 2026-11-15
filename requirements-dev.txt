@@ -1,3 +1,0 @@
--r requirements.txt
-# Independent statsmodels reference for the exposure-offset equivalence test.
-statsmodels==0.15.0

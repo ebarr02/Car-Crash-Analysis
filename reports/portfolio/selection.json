@@ -1,8 +1,0 @@
-{
-  "frequency": "poisson_boosting",
-  "severity": "constant",
-  "model": "poisson_boosting + constant",
-  "criterion": "pooled out-of-fold exposure-weighted Tweedie deviance, power 1.5",
-  "cv_deviance": 79.59827098737183,
-  "flat_baseline_cv_deviance": 88.32155229003361
-}

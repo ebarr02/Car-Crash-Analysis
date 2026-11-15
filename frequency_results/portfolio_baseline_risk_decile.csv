@@ -1,0 +1,2 @@
+risk_decile,policies,exposure,actual_claims,expected_claims,actual_frequency,predicted_frequency,actual_to_expected,frequency_lower_95,frequency_upper_95
+0,135603,71596.19310651995,7239,7194.7250258809645,0.10110872779548354,0.10049032935559493,1.0061538104597145,0.09879283504232424,0.10346520657323303

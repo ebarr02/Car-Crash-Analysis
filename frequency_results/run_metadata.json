@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "sample": null,
+  "training_rows": 542410,
+  "test_rows": 135603,
+  "selected_by_cv": "poisson_tree",
+  "linear_glm_pearson_dispersion": 2.498981314875397,
+  "python": "3.13.14",
+  "numpy": "2.3.3",
+  "pandas": "2.3.2",
+  "scipy": "1.16.2",
+  "scikit_learn": "1.7.2",
+  "joblib": "1.5.2"
+}

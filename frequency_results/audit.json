@@ -1,0 +1,10 @@
+{
+  "policies": 678013,
+  "duplicate_policy_ids": 0,
+  "invalid_rows": 0,
+  "total_exposure": 358360.1054629838,
+  "total_claims": 36056.0,
+  "rows_at_claim_cap_4": 16,
+  "rows_at_exposure_cap_1": 169349,
+  "limitation": "Input was already capped by setup_database.py. Counts at caps do not identify changed rows. Raw-vs-capped sensitivity requires original data."
+}
